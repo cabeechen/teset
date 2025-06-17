@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hi! 自我介紹頁</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #0d1117;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    #hiPage {
+      font-size: 64px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    #hiPage:hover {
+      transform: scale(1.1);
+    }
+
+    #introPage {
+      display: none;
+      text-align: center;
+    }
+
+    #introPage img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+      border: 3px solid white;
+    }
+
+    #introPage h2 {
+      margin: 8px 0;
+    }
+
+    #introPage p {
+      font-size: 18px;
+      max-width: 300px;
+      margin: auto;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 首頁 -->
+  <div id="hiPage">Hi 👋</div>
+
+  <!-- 介紹頁 -->
+  <div id="introPage">
+    <img src="me.JPG" alt="我自己" />
+    <h2>我是聖諺</h2>
+    <p>正在思考怎麼把自己的技能與個性變成一個厲害的作品。<br>我喜歡研究、動手做、偶爾耍點小幽默 😎</p>
+  </div>
+
+  <script>
+    const hiPage = document.getElementById("hiPage");
+    const introPage = document.getElementById("introPage");
+
+    hiPage.addEventListener("click", () => {
+      hiPage.style.display = "none";
+      introPage.style.display = "block";
+    });
+  </script>
+</body>
+</html>
